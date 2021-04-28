@@ -74,3 +74,18 @@ body {
   font-size: 2.5rem;
   letter-spacing: 1.7rem;
 }
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+}
