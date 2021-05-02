@@ -57,22 +57,26 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  backface-visibility: hidden;
 }
 .primary-heading {
   color: #fff;
   text-transform: uppercase;
+  transition: all 0.4s;
 }
 .primary-heading-main {
   display: block;
   font-weight: 400;
   font-size: 6.5rem;
   letter-spacing: 3.5rem;
+  animation: moveInLeft 2s ease-in;
 }
 .primary-heading-sub {
   display: block;
   font-weight: 700;
   font-size: 2.5rem;
   letter-spacing: 1.7rem;
+  animation: moveInRight 2s ease-in;
 }
 
 .btn-white {
@@ -88,4 +92,66 @@ body {
   padding: 1rem 4rem;
   font-size: 1.8rem;
   border-radius: 10rem;
+  transition: all 0.2;
+  position: relative;
+  animation: moveInBottom 0.9s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 4rem;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
