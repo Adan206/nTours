@@ -115,6 +115,15 @@ body {
   position: absolute;
   top: 0;
 }
+.btn:hover::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 4rem;
+  position: absolute;
+  top: 0;
+}
 
 @keyframes moveInLeft {
   0% {
