@@ -123,6 +123,7 @@ body {
   padding: 1rem 4rem;
   position: absolute;
   top: 0;
+  right: 0;
 }
 
 @keyframes moveInLeft {
